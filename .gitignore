@@ -1,0 +1,4 @@
+*.el~
+.DS_Store
+auto-save-list/
+backups/

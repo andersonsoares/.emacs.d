@@ -2,9 +2,6 @@
 ;; nao mostrar splash screen
 (setq inhibit-startup-message t)
 
- ;; responder 'yes' ou 'no' apenas com 'y' ou 'n'
-(defalias 'yes-or-no-p 'y-or-n-p)
-
 
 (add-to-list 'load-path user-emacs-directory)
 
@@ -56,8 +53,25 @@
    (package-refresh-contents)
    (init--install-packages)))
 
-;; setup shell envroments to emacs
-(require-package 'exec-path-from-shell)
-  (exec-path-from-shell-initialize)
 
+;; Are we on a mac?
+(setq is-mac (equal system-type 'darwin))
+
+;; Setup environment variables from the user's shell.
+(when is-mac
+  (require-package 'exec-path-from-shell)
+  (exec-path-from-shell-initialize))
+
+(require 'sane-defaults)
+
+;; guide-key
+(require 'guide-key)
+(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
+(guide-key-mode 1)
+(setq guide-key/recursive-key-sequence-flag t)
+(setq guide-key/popup-window-position 'bottom)
+
+;; Setup extensions
+(ido-mode)
+(eval-after-load 'ido '(require 'setup-ido))
 

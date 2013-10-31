@@ -92,5 +92,8 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+;; auto jump cursor to new window
+(defadvice split-window (after move-point-to-new-window activate)
+  "Moves the point to the newly created window after splitting."
+  (other-window 1))
 (provide 'sane-defaults)
-

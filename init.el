@@ -5,9 +5,6 @@
 
 (add-to-list 'load-path user-emacs-directory)
 
-;; emacs custom settings em um arquivo especifico
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
 
 (require 'appearance)
 
@@ -75,3 +72,7 @@
 (ido-mode)
 (eval-after-load 'ido '(require 'setup-ido))
 
+
+;; emacs custom settings em um arquivo especifico
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)

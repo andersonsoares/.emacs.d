@@ -22,6 +22,7 @@
   (packages-install
    '(magit
      paredit
+     ace-jump-mode
      move-text
      god-mode
      gist
@@ -68,10 +69,19 @@
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
 
+(require 'ace-jump-mode)
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+;; you can select the key you prefer to
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 ;; Setup extensions
 (ido-mode)
 (eval-after-load 'ido '(require 'setup-ido))
-
+;(eval-after-load 'dired '(require 'setup-dired))
 
 ;; emacs custom settings em um arquivo especifico
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

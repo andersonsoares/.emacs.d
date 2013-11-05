@@ -15,7 +15,7 @@
 (setq delete-by-moving-to-trash t)
 
 ;; Real emacs knights don't use shift to mark things
-(setq shift-select-mode nil)
+;;(setq shift-select-mode nil)
 
 ;; Transparently open compressed files
 (auto-compression-mode t)
@@ -60,7 +60,7 @@
 (winner-mode 1)
 
 ;; Never insert tabs
-(set-default 'indent-tabs-mode nil)
+;;(set-default 'indent-tabs-mode nil)
 
 ;; Show me empty lines after buffer end
 (set-default 'indicate-empty-lines t)

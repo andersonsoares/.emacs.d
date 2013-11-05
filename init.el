@@ -62,6 +62,7 @@
 
 (require 'sane-defaults)
 
+
 ;; guide-key
 (require 'guide-key)
 (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
@@ -79,9 +80,33 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; Setup extensions
-(ido-mode)
+(ido-mode)                              
 (eval-after-load 'ido '(require 'setup-ido))
 ;(eval-after-load 'dired '(require 'setup-dired))
+
+;; Functions (load all files in defuns-dir)
+(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
+(dolist (file (directory-files defuns-dir t "\\w+"))
+  (when (file-regular-p file)
+    (load file)))
+
+(require 'expand-region)
+
+
+;; Smart M-x is smart
+(require 'smex)
+(smex-initialize)
+
+(require 'key-bindings)
+
+;; comand logs
+;(require 'show-keys)
+;(show-keys-mode)
+;;(require 'flymake)
+
+;;setup for scala
+(require 'setup-scala)
+
 
 ;; emacs custom settings em um arquivo especifico
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

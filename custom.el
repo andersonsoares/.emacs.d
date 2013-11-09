@@ -6,7 +6,8 @@
  '(custom-enabled-themes (quote (dichromacy)))
  '(custom-safe-themes (quote ("e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "e50819ab79e8ea46de07762186dd986183257fc77342d5574557c24428851deb" "d63e19a84fef5fa0341fa68814200749408ad4a321b6d9f30efc117aeaf68a2e" default)))
  '(scala-indent:use-javadoc-style t)
- '(scalable-fonts-allowed t))
+ '(scalable-fonts-allowed t)
+ '(tree-widget-image-enable nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

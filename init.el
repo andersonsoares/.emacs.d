@@ -125,8 +125,8 @@
 (require 'dirtree)
 
 ;; Annoying arrows mode
-(require 'annoying-arrows-mode)
-(global-annoying-arrows-mode)
+;(require 'annoying-arrows-mode)
+;(global-annoying-arrows-mode)
 
 ;; emacs custom settings em um arquivo especifico
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

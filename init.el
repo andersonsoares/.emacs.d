@@ -113,6 +113,11 @@
 ;;setup for scala
 (require 'setup-scala)
 
+;;setup dirtree ( tree view of projects )
+(add-to-list 'load-path "~/.emacs.d/vendor/dirtree")
+(autoload 'dirtree "dirtree" "Add directory to tree view" t)
+(require 'dirtree)
+
 ;; Annoying arrows mode
 (require 'annoying-arrows-mode)
 (global-annoying-arrows-mode)

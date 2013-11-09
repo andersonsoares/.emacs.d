@@ -14,6 +14,12 @@
 (global-set-key (kbd "<s-up>") 'windmove-up)
 (global-set-key (kbd "<s-down>") 'windmove-down)
 
+;; ace jump mode easier
+(global-set-key (kbd "C-0") 'ace-jump-mode)
+
+;; dirtree C-o
+(global-set-key (kbd "C-o") 'dirtree)
+
 ;; Edit file with sudo
 (global-set-key (kbd "M-s e") 'sudo-edit)
 

@@ -28,6 +28,8 @@
      gist
      htmlize
      visual-regexp
+     undo-tree
+     expand-region
      flycheck
      flx
      flx-ido
@@ -43,6 +45,10 @@
      git-commit-mode
      gitconfig-mode
      gitignore-mode
+     smooth-scrolling
+     smex
+     annoying-arrows-mode
+     scala-mode2
      )))
 
 (condition-case nil

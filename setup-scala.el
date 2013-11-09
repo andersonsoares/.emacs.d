@@ -2,7 +2,7 @@
 
 (require 'scala-mode2)
 
-(add-to-list 'load-path "~/.emacs.d/ensime/ensime_2.10.0-RC3-0.9.8.2/elisp")
+(add-to-list 'load-path "~/.emacs.d/ensime/elisp")
 (require 'ensime)
 ;; This step causes the ensime-mode to be started whenever
 ;; scala-mode is started for a buffer. You may have to customize this step

@@ -99,14 +99,23 @@
 
 (require 'key-bindings)
 
+;; move-text (mover o texto selecionado para cima e para baixo M-seta)
+(require 'move-text)
+(move-text-default-bindings)
 ;; comand logs
 ;(require 'show-keys)
 ;(show-keys-mode)
 ;;(require 'flymake)
 
+(require 'setup-yasnippet)
+
+
 ;;setup for scala
 (require 'setup-scala)
 
+;; Annoying arrows mode
+(require 'annoying-arrows-mode)
+(global-annoying-arrows-mode)
 
 ;; emacs custom settings em um arquivo especifico
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
